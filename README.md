@@ -35,17 +35,7 @@ cd chatapp_backend
 
 You can run the application either directly on your local machine or using Docker.
 
-#### Option A: Running Locally
-
-Ensure that Redis is running and accessible, then execute:
-
-```bash
-dotnet run
-```
-
-The backend will be accessible at `http://localhost:5000`.
-
-#### Option B: Running with Docker Compose
+#### Option A: Running with Docker Compose(recommended)
 
 To run the backend along with Redis using Docker Compose, simply run:
 
@@ -54,6 +44,16 @@ docker-compose up --build
 ```
 
 This will build the Docker images and start the backend along with Redis. The backend will be accessible at `http://localhost:5000`.
+
+#### Option B: Running Locally(not recommended)
+
+Ensure that Redis is running and accessible, then execute:
+
+```bash
+dotnet run
+```
+
+The backend will be accessible at `http://localhost:5000`.
 
 ## API Endpoints
 

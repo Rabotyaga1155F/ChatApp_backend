@@ -1,0 +1,17 @@
+﻿services:
+  chatapp_backend.redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+      
+  chatapp_backend.webapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    depends_on:
+      - chatapp_backend.redis
